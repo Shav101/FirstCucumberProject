@@ -5,7 +5,6 @@
 #select department Home & Kitchen, and search coffee mug.
 #verify you are on coffee mug search results page (use title).
 #verify you are in Home & Kitchen department.
-@regression
 Feature: Amazon departments
 
   @amazonTest
