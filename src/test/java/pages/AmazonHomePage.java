@@ -16,8 +16,11 @@ public class AmazonHomePage {
 	@FindBy (id = "searchDropdownBox")
 	public WebElement departmentsDropdown;
 	
-	@FindBy (xpath = "//input[@id='twotabsearchtextbox']")
+	@FindBy (id = "twotabsearchtextbox")
 	public WebElement searchField;
+	
+	@FindBy (id = "nav-search-submit-button")
+	public WebElement searchButton;
 	
 	
 }
