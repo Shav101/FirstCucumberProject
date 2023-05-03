@@ -3,16 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="api_tests.TestNGDemo">
+      <class name="api_tests.SwaggerCreate_A_Pet">
         <methods>
-          <include name="assertionDemo"/>
-          <include name="softAssertDemo"/>
-          <include name="beforeTest"/>
-          <include name="afterMethod"/>
-          <include name="afterTest"/>
-          <include name="beforeMethod"/>
+          <include name="get_ApetById"/>
         </methods>
-      </class> <!-- api_tests.TestNGDemo -->
+      </class> <!-- api_tests.SwaggerCreate_A_Pet -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

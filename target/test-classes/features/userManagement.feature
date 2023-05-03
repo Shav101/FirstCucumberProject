@@ -39,7 +39,7 @@ Feature: Crater app user management
   | entityadmin@primetechschool.com | hellopassword    |
   | entityAd@primetechschool.com    | primetech@school |
   |                                 | Testing123       |
-  | nothing@primetechschool.com     |                  |
+  | nothing@primetechschool.com     | primetech@school |
   
   
   
