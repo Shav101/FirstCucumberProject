@@ -50,7 +50,8 @@ public class UserManagementSteps {
 	   utils.actionsSendKeys(loginpage.passwordField, DataReader.getProperty("password"));
 	}
 	@Then("I should see an error message")
-	public void i_should_see_an_error_message() {
+	public void i_should_see_an_error_message() throws InterruptedException {
+		Thread.sleep(1000);
 		utils.waitUntilElementVisible(loginpage.invalidLoginErrorMessage);
 		Assert.assertTrue(loginpage.invalidLoginErrorMessage.isDisplayed());
 	}
