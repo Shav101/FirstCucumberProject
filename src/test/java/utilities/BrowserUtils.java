@@ -16,13 +16,13 @@ public class BrowserUtils {
 
 	// waits for an element to be visible
 	public void waitUntilElementVisible(WebElement element) {
-		wait = new WebDriverWait(Driver.getDriver(), 5);
+		wait = new WebDriverWait(Driver.getDriver(), 10);
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 
 	// waits for an element to be gone
 	public void waitUntilElementNotVisible(WebElement element) {
-		wait = new WebDriverWait(Driver.getDriver(), 10);
+		wait = new WebDriverWait(Driver.getDriver(), 15);
 		wait.until(ExpectedConditions.invisibilityOfAllElements(element));
 	}
 

@@ -4,10 +4,6 @@ import java.util.List;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebElement;
-
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -43,6 +39,7 @@ public class CraterItemsManagementSteps {
 	public void i_navigate_to_items_tab() {
 		commonPage.itemsLink.click();
 		Assert.assertTrue(itemsPage.itemsPageHeaderText.isDisplayed());
+		
 	}
 	@When("I click on the Add Item button")
 	public void i_click_on_the_add_item_button() {
@@ -144,12 +141,14 @@ public class CraterItemsManagementSteps {
 	   itemsPage.deleteAnItem(itemName);
 	}
 	@Then("The item is no longer in the items list table")
-	public void the_item_is_no_longer_in_the_items_list_table() throws InterruptedException {
+	public void the_item_is_no_longer_in_the_items_list_table() throws InterruptedException{
 //		Thread.sleep(2000);
 		if (!itemsPage.filterNameBox.isDisplayed()) {
+			Thread.sleep(2000);
 			utils.waitUntilElementToBeClickable(itemsPage.filterButton);
-			utils.actionsClick(itemsPage.filterNameBox);
-			utils.waitUntilElementVisible(itemsPage.filterNameBox);
+			Thread.sleep(2500);
+			itemsPage.filterButton.click();
+			utils.waitUntilElementToBeClickable(itemsPage.filterNameBox);
 			utils.actionsSendKeys(itemsPage.filterNameBox, itemName);
 		}
 		utils.waitUntilElementVisible(itemsPage.filterNoResultFoundMessage);

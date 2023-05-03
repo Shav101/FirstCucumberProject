@@ -28,16 +28,19 @@ public class LoginPage {
 	@FindBy (xpath = "//h6[text()='Account Settings']")
 	public WebElement accountSettingsHeader;
 	
-	@FindBy (xpath = "//p[text()='These credentials do not match our records.']")
+	@FindBy (xpath = "//p[contains(text(), 'These credentials do not match our records.')]")
 	public WebElement invalidLoginErrorMessage;
 	
 	@FindBy (xpath = "//span[text()='Field is required']")
-	public WebElement fieldIsRequiredMessage;
+	public WebElement fieldIsRequiredErrorMessage;
 	
 	public void login() {
 		utils.actionsSendKeys(emailField, DataReader.getProperty("username"));
 		utils.actionsSendKeys(passwordField, DataReader.getProperty("password"));
 		loginBtn.click();
 	}
+	
+	@FindBy (xpath = "//div[@class='px-4 py-5 sm:px-8 sm:py-8']//child::div[3]//child::div//child::input")
+	public WebElement userEmailField;
 	
 }

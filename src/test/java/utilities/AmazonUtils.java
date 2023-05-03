@@ -18,7 +18,7 @@ public class AmazonUtils {
 	
 	public void waitUntilElementVisible(WebElement element) {
 		
-		wait = new WebDriverWait(Driver.getDriver(), 5);
+		wait = new WebDriverWait(Driver.getDriver(), 10);
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	

@@ -1,5 +1,4 @@
-
-@amazonSearch
+@regression @amazonSearch
 Feature: Amazon Search Functionality
 
   @amazonTestData

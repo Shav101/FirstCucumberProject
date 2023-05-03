@@ -6,7 +6,7 @@ Feature: Crater app user management
   Background: 
     Given As a user, I am on the login page
 
-  @validlogin @smokeTest
+  @validlogin @smoketest
   Scenario: Successful login
     When I enter valid username and valid password
     And I click on login button
@@ -55,7 +55,7 @@ Feature: Crater app user management
   | entityadmin@primetechschool.com | primetech@school |
   | entityadmin@primetechschool.com | primetech@school |
   | entityadmin@primetechschool.com | primetech@school |
-  | entityadmin@primetechschool.com | primetech@school |
+
 
   
   
