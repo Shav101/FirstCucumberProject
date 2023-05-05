@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
@@ -32,6 +33,8 @@ public class Driver {
 			switch (browser) {
 			case "firefox":
 				FirefoxDriverManager.firefoxdriver().setup();
+				FirefoxOptions ffoptions = new FirefoxOptions();
+				ffoptions.setHeadless(true);
 				driver = new FirefoxDriver();
 				break;
 			case "edge":

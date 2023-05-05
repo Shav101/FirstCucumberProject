@@ -13,6 +13,8 @@ public class SwaggerCreate_A_Pet {
 	String petId = "id: 101";
 	String petName = "\"name\": PewPewDoggie";
 	Response response;
+	
+	
 	@Test
 	public void createApet_Post() {
 

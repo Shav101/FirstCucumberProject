@@ -3,11 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="api_tests.SwaggerCreate_A_Pet">
+      <class name="api_tests.CraterItems">
         <methods>
-          <include name="get_ApetById"/>
+          <include name="login"/>
+          <include name="getItem"/>
+          <include name="updateItem"/>
+          <include name="setup"/>
+          <include name="createItem"/>
         </methods>
-      </class> <!-- api_tests.SwaggerCreate_A_Pet -->
+      </class> <!-- api_tests.CraterItems -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
