@@ -9,7 +9,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import utilities.BrowserUtils;
 import utilities.DataReader;
@@ -44,10 +43,6 @@ public class CraterItems {
 		requestBody.put("password", DataReader.getProperty("password1"));
 		requestBody.put("device_name", DataReader.getProperty("device_name"));
 		
-	
-		Map<String, Object> headerInfo = new HashMap<>();
-		headerInfo.put("contentType", "application/json");
-		headerInfo.put("accept", "application/json");
 		
 		// MAKING THE REQUEST
 		response = RestAssured.given()

@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="api_tests.CraterItems">
+      <class name="api_tests.ApiLogout">
         <methods>
           <include name="login"/>
-          <include name="getItem"/>
-          <include name="updateItem"/>
-          <include name="setup"/>
-          <include name="createItem"/>
+          <include name="logout"/>
+          <include name="logoutWithIncorrectAuthorization"/>
         </methods>
-      </class> <!-- api_tests.CraterItems -->
+      </class> <!-- api_tests.ApiLogout -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
